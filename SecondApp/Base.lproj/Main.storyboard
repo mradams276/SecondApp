@@ -30,7 +30,9 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Buttan"/>
                                             <connections>
+                                                <action selector="UIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQs-7j-LBP"/>
                                                 <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TQg-7f-fIS"/>
+                                                <action selector="firstButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mel-aR-Hcg"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -67,8 +69,10 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="UIButton" destination="Ymo-nS-JWC" id="wDA-5t-dZc"/>
                         <outlet property="background" destination="8bC-Xf-vdC" id="dm8-Uk-cVp"/>
-                        <outlet property="firstButton" destination="Ymo-nS-JWC" id="pjm-Rc-0N6"/>
+                        <outlet property="firstButton" destination="PHJ-8M-iWs" id="ARh-gP-xaj"/>
+                        <outlet property="firstLabel" destination="3FK-Gs-5Qc" id="t51-zQ-1pH"/>
                         <outlet property="firtLabel" destination="3FK-Gs-5Qc" id="VUC-N1-Qzc"/>
                         <outlet property="searchDisplayController" destination="g4b-g0-w0c" id="sIP-zF-uKG"/>
                     </connections>

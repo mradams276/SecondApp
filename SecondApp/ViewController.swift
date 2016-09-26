@@ -12,9 +12,9 @@ class ViewController: UIViewController
 {
     @IBOutlet weak var background: UIView!
     
-    @IBOutlet weak var firstButton: UIToolbar!
-
-    @IBOutlet weak var firtLabel: UILabel!
+    @IBOutlet weak var firstButton: UIButton!
+    
+    @IBOutlet weak var firstLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -26,14 +26,26 @@ class ViewController: UIViewController
     super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
-    @IBAction func clickButton(sender: UIButton)
+    @IBAction func firstButton(sender: UIButton)
     {
-    firtLabel.text = "You Clicked Me"
-    firtLabel.textColor = UIColor.cyanColor()
-    background.backgroundColor = UIColor.blueColor()
+    firstLabel.text = "You Clicked Me"
+    firstLabel.textColor = makeRandomColor()
+    background.backgroundColor = makeRandomColor()
     }
 
+    
+        private func makeRandomColor() -> UIColor
+        {
+            let randomColor : UIColor
+            let red :CGFloat = CGFloat(drand48())
+            let green :CGFloat = CGFloat(drand48())
+            let blue :CGFloat = CGFloat(drand48())
+            randomColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+            
+            return randomColor
+    }
 }
 
 
