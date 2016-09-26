@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecondApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tcq-x0-EOx">
+                                <rect key="frame" x="60" y="469" width="480" height="66"/>
+                            </adBannerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ymo-nS-JWC">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="7T9-Z1-drx"/>
+                                    <barButtonItem style="plain" id="CBm-Y5-CK7">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PHJ-8M-iWs">
+                                            <rect key="frame" x="64" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Buttan"/>
+                                            <connections>
+                                                <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TQg-7f-fIS"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="srJ-sT-qww">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jax-2L-9zo"/>
+                                </connections>
+                            </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Steve Jobs R.I.P." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BJA-ta-10G">
+                                <rect key="frame" x="60" y="73" width="480" height="155"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Doctor-away" translatesAutoresizingMaskIntoConstraints="NO" id="vt5-4B-uBe">
+                                <rect key="frame" x="91" y="110" width="418" height="342"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOO SOON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FK-Gs-5Qc">
+                                <rect key="frame" x="118" y="567" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KR0-c5-BN8" appends="YES" id="w39-X9-gPx"/>
+                            <outletCollection property="gestureRecognizers" destination="ilb-0T-zcP" appends="YES" id="jh5-tW-liP"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="8bC-Xf-vdC" id="dm8-Uk-cVp"/>
+                        <outlet property="firstButton" destination="Ymo-nS-JWC" id="pjm-Rc-0N6"/>
+                        <outlet property="firtLabel" destination="3FK-Gs-5Qc" id="VUC-N1-Qzc"/>
+                        <outlet property="searchDisplayController" destination="g4b-g0-w0c" id="sIP-zF-uKG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KR0-c5-BN8"/>
+                <rotationGestureRecognizer id="ilb-0T-zcP"/>
+                <searchDisplayController id="g4b-g0-w0c">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="m64-UD-wTY"/>
+                        <outlet property="searchBar" destination="srJ-sT-qww" id="JlG-aU-z3l"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="zz2-3T-6E3"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="jGq-Xz-hcH"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="vSx-Px-6QV"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Doctor-away" width="500" height="374"/>
+    </resources>
 </document>
