@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tcq-x0-EOx">
-                                <rect key="frame" x="60" y="469" width="480" height="66"/>
-                            </adBannerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ymo-nS-JWC">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
@@ -45,21 +42,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="jax-2L-9zo"/>
                                 </connections>
                             </searchBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Steve Jobs R.I.P." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BJA-ta-10G">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Im SPECIAL" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BJA-ta-10G">
                                 <rect key="frame" x="60" y="73" width="480" height="155"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Doctor-away" translatesAutoresizingMaskIntoConstraints="NO" id="vt5-4B-uBe">
-                                <rect key="frame" x="91" y="110" width="418" height="342"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOO SOON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FK-Gs-5Qc">
                                 <rect key="frame" x="118" y="567" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Doctor-away" translatesAutoresizingMaskIntoConstraints="NO" id="gjP-k3-40F">
+                                <rect key="frame" x="166" y="185" width="269" height="229"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -94,6 +91,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Doctor-away" width="500" height="374"/>
+        <image name="Doctor-away" width="2340" height="2340"/>
     </resources>
 </document>
